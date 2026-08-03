@@ -9,4 +9,8 @@ class Checkout
         console.log("regarding payment")
         console.log("hello")
     }
+    async shipping()
+    {
+        console.log("code to validate totoal")
+    }
 }
