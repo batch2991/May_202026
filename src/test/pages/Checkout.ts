@@ -7,5 +7,6 @@ class Checkout
     async payment()
     {
         console.log("regarding payment")
+        console.log("hello")
     }
 }
