@@ -1,0 +1,7 @@
+class payment
+{
+    f1()
+    {
+        
+    }
+}
