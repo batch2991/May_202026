@@ -12,5 +12,6 @@ class Checkout
     async shipping()
     {
         console.log("code to validate totoal")
+        console.log("hello")
     }
 }

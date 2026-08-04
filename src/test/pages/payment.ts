@@ -1,4 +1,7 @@
 class payment
 {
-    
+    f1()
+    {
+        
+    }
 }

@@ -15,4 +15,8 @@ export class LoginPage extends Base {
     {
         console.log("Code to validate the error message for invalid login")
     }
+    async readTitle()
+    {
+        
+    }
 }
