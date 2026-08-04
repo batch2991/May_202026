@@ -1,0 +1,41 @@
+on:
+  pull_request:
+    branches:
+      - main
+      - master     
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Run Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Check Code Quality
+        run: npm run lint
+
+      # Optional if using TypeScript
+      - name: Type Check
+        run: npm run typecheck
