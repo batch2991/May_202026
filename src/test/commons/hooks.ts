@@ -5,7 +5,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { ProductsPage } from "../pages/ProductsPage";
 
 Before(async function (this: MyWorld) {
-   this.browser = await chromium.launch({ headless: false })
+   this.browser = await chromium.launch()
    this.context = await this.browser.newContext({
       recordVideo: {
          dir: "./reports/videos/",   // folder where videos are saved
